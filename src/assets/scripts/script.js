@@ -9,14 +9,12 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
 
 function setGradientWidth(){
-    if(Number(screen.width) === 2560){
+    if((Number(screen.width) === 2560) || (Number(screen.width) <= 1520)){
         return 0;
     }
-    const gradientBar = document.querySelector(".gradient");
-    const targetDiv = document.querySelector(".main-general__card-block");
-    let targetpx = (Number(screen.width) - Number(targetDiv.clientWidth))/2;
+    let targetpx = (Number(screen.width) - 1500)/2;
     let targetpercent = (targetpx * 100) / screen.width;
-    console.log(targetpx, Math.floor(targetpercent));
+    const gradientBar = document.querySelector(".gradient");
     gradientBar.style.right = `${targetpercent}%`;
     return 1;
 }
