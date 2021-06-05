@@ -2,6 +2,22 @@
     display:flex;
     gap:5px;
 
+    &::after{
+        content: "";
+        position: absolute;
+        right:20%;
+        margin-top: 5px;
+        width: 5px;
+        height:351px;
+        background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+        box-shadow: -10px 0 20px 3px #000;
+        @media (max-width:1520px){
+            display:none;
+        }
+        @media (max-width:1930px){
+            right:10.5%;
+        }
+    }
     &::-webkit-scrollbar {
         height:10px;
     }
@@ -191,9 +207,4 @@
             }
         }
     }
-}
-
-.test{
-    flex: 0 0 400px;
-    background:blue;
 }

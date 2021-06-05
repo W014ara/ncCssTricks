@@ -1,0 +1,39 @@
+.articles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 1500px;
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        gap:50px;
+        width:1500px;
+        &._mobile{
+            width:1500px;
+        }
+    }
+
+    &__item{
+        display: flex;
+        width:330px;
+        height:600px;
+        background:red;
+        align-self: center;
+    }
+
+    &__advertisement{
+        display: flex;
+        justify-content:center;
+        align-items:flex-start;
+        width:430px;
+        &._mobile{
+            display: none;
+        }
+        &-item{
+            position:sticky;
+            width:300px;
+            height:600px;
+            background:blue;
+        }
+    }
+}
