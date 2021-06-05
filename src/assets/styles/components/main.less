@@ -1,5 +1,8 @@
 .main{
     &-general{
+        display: flex;
+        flex-direction: column;
+        gap:50px;
         &__article{
             position: relative;
             max-width:1500px;
@@ -59,9 +62,7 @@
                     height: 100%;
                     z-index: 98;
                     @media (min-width:0px) and (max-width:768px){
-                        display: none;
-                        // width: 100%;
-                        // height:0;
+                        display: none;;
                     }
                 }
                 &:after{
@@ -76,10 +77,6 @@
                     background: linear-gradient(90deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.013) 8.1%,hsla(0,0%,100%,.049) 15.5%,hsla(0,0%,100%,.104) 22.5%,hsla(0,0%,100%,.175) 29%,hsla(0,0%,100%,.259) 35.3%,hsla(0,0%,100%,.352) 41.2%,hsla(0,0%,100%,.45) 47.1%,hsla(0,0%,100%,.55) 52.9%,hsla(0,0%,100%,.648) 58.8%,hsla(0,0%,100%,.741) 64.7%,hsla(0,0%,100%,.825) 71%,hsla(0,0%,100%,.896) 77.5%,hsla(0,0%,100%,.951) 84.5%,hsla(0,0%,100%,.987) 91.9%,#fff);
                     @media (min-width:0px) and (max-width:768px){
                         display: none;
-                        // background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.013) 8.1%, hsla(0, 0%, 100%, 0.049) 15.5%, hsla(0, 0%, 100%, 0.104) 22.5%, hsla(0, 0%, 100%, 0.175) 29%, hsla(0, 0%, 100%, 0.259) 35.3%, hsla(0, 0%, 100%, 0.352) 41.2%, hsla(0, 0%, 100%, 0.45) 47.1%, hsla(0, 0%, 100%, 0.55) 52.9%, hsla(0, 0%, 100%, 0.648) 58.8%, hsla(0, 0%, 100%, 0.741) 64.7%, hsla(0, 0%, 100%, 0.825) 71%, hsla(0, 0%, 100%, 0.896) 77.5%, hsla(0, 0%, 100%, 0.951) 84.5%, hsla(0, 0%, 100%, 0.987) 91.9%, #fff);
-                        // left:0;
-                        // height:60%;
-                        // width: 100%;
                     }
                 }
             }
@@ -199,6 +196,11 @@
             &-authorName{
                 font-weight: 600;
             }
+        }
+        &__card-block{
+            margin:0 auto;
+            width: 1500px;
+            height:420px;
         }
     }
 }
