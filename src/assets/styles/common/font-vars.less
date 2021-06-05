@@ -3,19 +3,8 @@
 @font-family: NotoSans, sans-serif;
 @font-normal-size: 14px;
 
-.font-base() {
-  font-family: @font-family;
-  font-weight: 400;
-  font-style: normal;
-  font-size: @font-normal-size;
-}
-
-.font-light() {
-  .font-base();
-  font-weight: 300;
-}
-
-.font-bold() {
-  .font-base();
+.basic-font(@font-size){
+  font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
   font-weight: 600;
+  font-size: @font-size * 1px;
 }
