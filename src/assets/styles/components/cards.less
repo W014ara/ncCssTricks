@@ -1,5 +1,5 @@
 .cards{
-    display: flex;
+    display:flex;
     gap:5px;
     &::-webkit-scrollbar {
         height:10px;
@@ -10,7 +10,7 @@
         box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25),inset -2px -2px 2px rgba(0,0,0,.25);
     }
     @media (min-width:0px) and (max-width:768px) {
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     &__main{
@@ -18,7 +18,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content:flex-end;
-        width:320px;
+        flex: 0 0 250px;
         height:400px;
         background:
         linear-gradient(black,black) padding-box, /*this is your grey background*/
