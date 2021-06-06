@@ -1,0 +1,46 @@
+.connect{
+    &-block{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        &__title{
+            .basic-font(18);
+            color:@footer-titleColor;
+            letter-spacing: .2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            color: @footer-listDefaultColor;
+            list-style-type: none;
+            margin: 0;
+            padding:0;
+            &-link{
+                color:@footer-listDefaultColor;
+                text-decoration: none;
+                &:active{
+                    color:@footer-listDefaultColor;
+                }
+            }
+            &-item{
+                .basic-font(18);
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 300;
+                letter-spacing: .1em;
+                &:hover{
+                    color:@footer-listActiveColor;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    span{
+                        color:@footer-listDefaultColor;
+                    }
+                }
+                &._descript{
+                    opacity: .3;
+                }
+            }
+        }
+    }
+}
