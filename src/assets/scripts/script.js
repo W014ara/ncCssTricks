@@ -1,5 +1,6 @@
 const articles = document.querySelector(".articles__items");
 const advertisement = document.querySelector(".articles__advertisement");
+const icon = document.querySelector('.header-general__logo-icon');
 
 
 window.onload = function(){
@@ -31,3 +32,11 @@ document.addEventListener("DDOMContentLoaded", (e)=>{
         advertisement.classList.remove("_mobile");
     }
 })
+
+let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        entry.isIntersecting ? entry.target.classList.add("_rotate") : entry.target.classList.remove("_rotate");
+    });
+});
+
+observer.observe(icon);

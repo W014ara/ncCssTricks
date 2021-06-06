@@ -84,6 +84,9 @@
                 height:27px;
                 fill:@main-iconColor;
                 opacity: .7;
+                &._rotate{
+                    animation: spinMe 2s;
+                }
                 @media (max-width:1000px){
                     width:18px;
                     height:18px;
@@ -117,5 +120,14 @@
                 right: 1rem;
             }
         }
+    }
+}
+
+@keyframes spinMe {
+    from {
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(1080deg);
     }
 }
