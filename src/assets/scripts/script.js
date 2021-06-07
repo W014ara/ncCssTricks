@@ -23,16 +23,6 @@ window.addEventListener("resize", (e)=>{
     }
 })
 
-document.addEventListener("DDOMContentLoaded", (e)=>{
-    if(Number(screen.width) <= 768){
-        articles.classList.add("_mobile");
-        advertisement.classList.add("_mobile");
-    }else{
-        articles.classList.remove("_mobile");
-        advertisement.classList.remove("_mobile");
-    }
-})
-
 let observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         entry.isIntersecting ? entry.target.classList.add("_rotate") : entry.target.classList.remove("_rotate");
