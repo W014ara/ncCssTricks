@@ -1,7 +1,7 @@
 .cards{
     display:flex;
     gap:5px;
-    
+    max-width: 1500px;
     &::-webkit-scrollbar {
         height:10px;
     }
@@ -56,14 +56,26 @@
     }
     &__list{
         display: flex;
-        width: 100%;
+        width: 1500px;
         height:420px;
         padding-left: 55px;
         padding-top:5px;
         gap:10px;
         overflow-x: scroll;
+        @media (max-width:1024px){
+            width: 40rem;
+        }
         @media (max-width:769px){
             overflow:visible;
+            width: 37rem;
+        }
+
+        @media (max-width:530px){
+            width: 13rem;
+        }
+
+        @media (max-width:375px){
+            width: 5rem;
         }
 
         &::-webkit-scrollbar {
